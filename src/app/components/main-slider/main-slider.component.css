@@ -1,0 +1,15 @@
+
+.largeImage {
+  height: 400px;
+}
+
+  @media (max-width: 700px) {
+
+  .minImage {
+    display: none;
+  }
+
+  .largeImage{
+    height: auto;
+  }
+}

@@ -1,0 +1,19 @@
+
+
+<div class="product pb-4">
+  <a [routerLink]="['/productDetails',product.id]">
+    <img [src]="product.imageCover" alt="">
+    <div class="product-body px-2">
+      <p class="text-main mb-0">{{product.category.name}}</p>
+      <h2 class="h6 text-dark">{{product.title.split(' ').slice(0,2).join(' ')}}</h2>
+      <div class="d-flex justify-content-between">
+        <span class="price text-dark">{{product.price | concat : 'Total: '}} EGP</span>
+        <div class="pb-2">
+          <i class="fa fa-star rating-color fa-sm"></i>
+          <span class="star text-dark">{{product.ratingsAverage}}</span>
+        </div>
+      </div>
+    </div>
+  </a>
+  <button class="btn bg-main fw-bolder text-white" (click)="addProduct(product._id)"> + Add </button>
+</div>

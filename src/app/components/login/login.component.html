@@ -1,0 +1,39 @@
+
+<div class="conatiner" *ngIf="!isLoading">
+  <div class="contain">
+    <div class="login">
+      <h2 class="fs-4 fw-bold text-center mb-4 text-white">Login</h2>
+      <div *ngIf="apiError" class="alert alert-danger">
+        {{apiError}}
+      </div>
+
+      <form [formGroup]="registerForm" (ngSubmit)="login(registerForm)">
+
+        <label for="phone">Email :</label>
+        <input type="email" id="email" formControlName="email" class="form-control mb-3" >
+        <div *ngIf="registerForm.get('email')?.errors && (registerForm.get('email')?.touched || isNotValid)" class="alert alert-danger">
+          <p *ngIf="registerForm.get('email')?.getError('required')" class="mb-0 p-0">email is required</p>
+          <p *ngIf="registerForm.get('email')?.getError('email')" class="mb-0">email is valid</p>
+        </div>
+
+        <label for="password">Password :</label>
+        <input type="password" id="password" formControlName="password" class="form-control mb-3" >
+        <div *ngIf="registerForm.get('password')?.errors && (registerForm.get('password')?.touched || isNotValid)" class="alert alert-danger mb-3">
+          <p *ngIf="registerForm.get('password')?.getError('required')" class="mb-0">password is required</p>
+          <p *ngIf="registerForm.get('password')?.getError('pattern')" class="mb-0">password is valid</p>
+        </div>
+
+        <!-- [disabled]="registerForm.invalid" -->
+        <button class="btn bg-main text-white" >
+          <i *ngIf="isLoading" class="fa fa-spinner fa-spin"></i>
+          <span *ngIf="!isLoading">Login</span>
+        </button>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<div *ngIf="isLoading">
+  <app-loader></app-loader>
+</div>

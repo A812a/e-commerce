@@ -1,0 +1,27 @@
+
+
+
+* {
+  margin: 0;
+}
+.contain {
+  height: calc(100vh - 64px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chickout {
+  width: 75%;
+  margin: 0px auto;
+  border: 1px solid #a3af3b;
+  padding: 25px;
+  border-radius: 5px;
+  background-color: rgb(159, 200, 63);
+}
+
+
+@media (max-width:800px) {
+  .chickout {
+    width: 95%;
+  }
+}

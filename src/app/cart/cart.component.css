@@ -1,0 +1,17 @@
+
+
+.btn-count {
+  border: 1px solid #0aad0a !important;
+}
+
+@media (max-width:800px) {
+  h5 {
+    font-size: 16px;
+  }
+  h6 {
+    font-size: 14px;
+  }
+  .updown {
+    width: 30%;
+  }
+}

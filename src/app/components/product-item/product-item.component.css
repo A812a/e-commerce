@@ -1,0 +1,42 @@
+
+
+a{
+  text-decoration: none;
+}
+
+button {
+  margin: auto;
+  display: block;
+}
+
+.product img {
+  width: 100%;
+}
+
+
+
+@media (min-width: 800px) and (max-width: 1500px){
+
+.price {
+  font-size: 13px;
+}
+
+h2 {
+  font-size: 12px;
+}
+
+.star {
+  font-size: 13px;
+}
+
+}
+@media (max-width: 700px) {
+  button {
+    width: 75%;
+  }
+  .product img {
+    width: 100%;
+    display: block;
+    height: 290px;
+  }
+}
